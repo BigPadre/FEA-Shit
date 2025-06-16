@@ -1,1 +1,17 @@
 #takes list of nodes from iso drawing, converts lengths and angle to global geometry parameter list (lengths and angles)
+
+#func that selects nodes from geometry corners in iso drawings numbered by selection order and iso lengths
+
+#need horz line ref datum for iso angle calcs 
+
+#30 deg from horz datum to node-node line: out of plane straight line right face
+#150 deg from horz dat: out of plane left face
+#90 deg: vert edge
+#implicit forward tilt of z axis: also 30 deg?
+#for acute angles between nodes in iso view, add 30 to get global corner angle
+#for obtuse angles between nodes, subtract 30 for global
+#collect u,v coords from iso view for assoicated nodea
+#convert to net rectangular length for iso lengths 
+#use z axis tilt and horz datum angle to get transformed iso lengths 
+#establish proportion factors based on trans iso lengths and known dims 
+#convert trans iso lengths
